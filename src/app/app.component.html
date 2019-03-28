@@ -1,0 +1,91 @@
+<div style="text-align:center">
+  <h1>
+    {{ title }}
+  </h1>
+</div>
+
+<div class="row">
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+        <h5 class="card-title">Cadastro de Clientes</h5>
+        <button type="button" (click)="configuraModal(0)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+          Cadastro de cliente
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- -->
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Cadastro de veículos</h5>
+          <button type="button"  (click)="configuraModal(1)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Cadastro de Veículos
+          </button>
+        </div>
+      </div>
+    </div>
+  <!-- -->
+  <div class="col-sm-3">
+    <div class="card">
+      <div class="card-body">
+          <h5 class="card-title">Cadastro de Patio</h5>
+          <button type="button"  (click)="configuraModal(2)" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            Cadastro de Patio
+          </button>
+        </div>
+      </div>
+    </div>    
+</div>
+<br>
+
+<form class="form-group col-sm-8 card card-body" style="box-align: center">
+  <div class="row">    
+    <input class="form-control col-sm-2" id="idplaca" placeholder="Placa do carro">
+    <input  class="form-control  col-sm-4" id="idmodelo" placeholder="Modelo do carro">
+    <input  class="form-control  col-sm-2" id="idcor" placeholder="cor do carro">
+    <button>Cadastro</button>
+  </div>
+  <div class="form-check"> 
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Vincular veiculo com cliente</label>
+  </div>
+
+  <div class="row">    
+    <input class="form-control col-sm-2" id="idCPF" placeholder="CPF">
+    <input  class="form-control  col-sm-4" id="idnomecliente" placeholder="Nome do cliente">
+    <input  class="form-control  col-sm-2" id="idtelefone" placeholder="Telefone">
+    <button>Cadastro</button>
+  </div>
+    <div class="row">
+    <button type="submit" class="btn btn-outline-success">Entrada</button>
+    <button type="submit" class="btn btn-outline-primary">Saida  </button>
+    <label> - Quantidade de vagas disponível: </label>
+    <label aria-placeholder="0"></label>
+    </div>
+  </form>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">{{modaltitulo}}</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <input class="form-control col-sm-6" id="idplaca" placeholder="{{primeira}}">
+        <input  class="form-control  col-sm-6" id="idmodelo" placeholder="{{segunda}}">
+        <input  class="form-control  col-sm-6" id="idcor" placeholder="{{terceira}}">
+          </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Salvar registro</button>
+      </div>
+    </div>
+  </div>
+</div>
+
